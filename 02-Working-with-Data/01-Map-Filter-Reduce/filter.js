@@ -6,22 +6,37 @@ const restaurants = [
   { name: "Dosa Corner", rating: 4.2 },
   { name: "Cafe Day", rating: 3.5 },
 ];
+// Your  task 3: Use filter() and map() together to get the names of restaurants rated above 4, with all names converted to uppercase.
+
+const res = restaurants.filter((data) => {
+    const topRated = data.rating > 4
+    return topRated;
+})
+
+const transform = res.map((data) => {
+    console.log(data);
+    return data.name.toUpperCase();
+    
+})
+
+console.log(transform);
+
 
 // task 2  Your task: Use filter() to get restaurants with a rating greater than 4, then use map() to get only their names.
 
-const res = restaurants.filter((data) => {
-    console.log(data);
+// const res = restaurants.filter((data) => {
+//     console.log(data);
     
-    const topRated = data.rating > 4;  
-    return topRated
-})
+//     const topRated = data.rating > 4;  
+//     return topRated
+// })
 
 
-const names = res.map((data) => {
-    return data.name.toUpperCase
-})
+// const names = res.map((data) => {
+//     return data.name.toUpperCase
+// })
 
-console.log(names);
+// console.log(names);
 
 
 // const newRes = restaurants.filter((resData) => {
